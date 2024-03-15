@@ -20,29 +20,21 @@
   <summary>Table of Contents</summary>
   <ol>
     <li>
-      <a href="#about-the-project">About The Plug-In</a>
-      <ul>
-        <li><a href="#built-with">Built With</a></li>
-      </ul>
+      <a href="#about-the-plug-in">About The Plug-In</a>
     </li>
     <li>
       <a href="#getting-started">Getting Started</a>
     </li>
-    <li><a href="#usage">Usage</a>
+    <li><a href="#usage-of-the-graph-module">Usage of the Graph Module</a>
       <ul>
-        <li><a href="#usage-of-excalibur-concepts">Excalibur Concepts</a>
-        <ul>
-            <li><a href="#loader">Loader</a></li>
-            <li><a href="#actor">Actor</a></li>
-            <li><a href="#tilemap">Tilemap</a></li>
-          </ul>
-        </li >
-        <li><a href="#usage-of-peasy-ui">Peasy-UI</a></li>
         <li><a href="#usage-of-the-graph-module">Graph module</a>
           <ul>
-            <li><a href="#manual">Manual</a></li>
-            <li><a href="#importing-tilemap">Tilemap</a></li>
-          </ul>
+            <li><a href="#types">Types</a></li>
+            <li><a href="#manual-entry">Manual Entry</a></li>
+            <li><a href="#importing-tilemap">Tilemap Importing</a></li>
+            <li><a href="#output-from-graph">Output from Graph</a></li>
+            <li><a href="#utility-methods">Utility Methods</a></li>
+         </ul>
         </li>
       </ul>
     </li>
@@ -150,6 +142,8 @@ export type GraphTileMap = {
 A GraphTileMap is a collection of GraphTiles along with the parameters for the tilemap dimensions. The 'tiles' property comes in as a
 flat array, and the parser uses 'rows' and 'cols' to manage determining the shape of the tile map overall, including establishing the
 neighbor Nodes with respect to each Node.
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ### Manual Entry
 
@@ -290,6 +284,8 @@ shortestPath(startnode: Node, endnode: Node): Node[]
 The shortest path method takes the starting node and ending node as params, and returns an array of nodes consistening of, and in
 order, from starting node to ending node, and includes every node in between.
 
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
 ### Utility Methods
 
 #### ResetGraph
@@ -309,7 +305,7 @@ getEdges();
 
 These methods return a Map of the current overall collection of nodes and edges respectively.
 
-####
+#### getAdjacentNodes,getAdjacentEdges,getAdjacentEdgesTo
 
 ```ts
 getAdjacentNodes(node: Node): Node[];
