@@ -1,0 +1,42 @@
+{
+  "name": "@excaliburjs/excalibur-graph",
+  "version": "1.0.0",
+  "description": "excalibur-graph provides ability to build adjacency lists  with Excalibur.js",
+  "main": "dist/excalibur-graph.min.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "vite": "vite build",
+    "build": "tsc --build",
+    "buildprod": "tsc --build && npm run minify",
+    "minify": "uglifyjs dist/index.js -c -m -o dist/excalibur-graph.min.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/excaliburjs/excalibur-graph.git"
+  },
+  "keywords": [
+    "excalibur",
+    "game",
+    "engine",
+    "graph",
+    "nodes",
+    "adjacency",
+    "pathfinding",
+    "dijkstra"
+  ],
+  "author": {
+    "name": "Excalibur.js Team",
+    "email": "excaliburjs@gmail.com",
+    "url": "http://excaliburjs.com"
+  },
+  "license": "BSD-2-Clause",
+  "bugs": {
+    "url": "https://github.com/excaliburjs/excalibur-graph/issues"
+  },
+  "homepage": "https://github.com/excaliburjs/excalibur-graph#readme",
+  "dependencies": {
+    "excalibur": "^0.29.1",
+    "uglify-js": "^3.17.4",
+    "vite": "^5.1.6"
+  }
+}
