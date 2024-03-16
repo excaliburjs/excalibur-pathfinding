@@ -38,19 +38,11 @@ export type GraphTileMap = {
   cols: number;
 };
 
-export class ExcaliburGraph implements Loadable<any> {
-  data: any;
+export class ExcaliburGraph {
   duration: number = 0;
   starttime: number = 0;
   endtime: number = 0;
 
-  isLoaded(): boolean {
-    return true;
-  }
-
-  load(): Promise<any> {
-    return Promise.resolve();
-  }
   key: boolean = false;
   nodes: Map<string, GraphNode> = new Map();
   edges: Map<string, Edge> = new Map();
