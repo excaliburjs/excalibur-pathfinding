@@ -193,7 +193,7 @@ export class ExcaliburGraph {
     this.nodes.forEach(node => resultArray.push({ node, distance: Infinity, previous: null }));
 
     //start with starting node
-    //add startingnode to result array
+    //add starting node to result array
 
     const startingNodeIndex = resultArray.findIndex(node => node.node === sourcenode);
     if (startingNodeIndex === -1) return [];
@@ -228,9 +228,9 @@ export class ExcaliburGraph {
 
       if (listOfAvailableNodes.length > 0) {
         for (let i = 0; i < listOfAvailableNodes.length; i++) {
-          const unVisitiedNode = listOfAvailableNodes[i];
+          const unVisitedNode = listOfAvailableNodes[i];
 
-          let index = resultArray.findIndex(node => node.node === unVisitiedNode);
+          let index = resultArray.findIndex(node => node.node === unVisitedNode);
 
           if (resultArray[index].distance < lowestDistance) {
             lowestDistance = resultArray[index].distance;
@@ -245,8 +245,8 @@ export class ExcaliburGraph {
         lowestDistanceIndex = -1;
 
         for (let i = 0; i < unvisited.length; i++) {
-          const unVisitiedNode = unvisited[i];
-          let index = resultArray.findIndex(node => node.node === unVisitiedNode);
+          const unVisitedNode = unvisited[i];
+          let index = resultArray.findIndex(node => node.node === unVisitedNode);
           if (resultArray[index].distance < lowestDistance) {
             lowestDistance = resultArray[index].distance;
             lowestDistanceIndex = index;
@@ -309,7 +309,7 @@ export class ExcaliburGraph {
   }
 }
 
-export class ExcaliburAstar {
+export class ExcaliburAStar {
   tilemap = {
     cols: 0,
     rows: 0,
@@ -367,9 +367,9 @@ export class ExcaliburAstar {
     if (this.startnode === null || this.endnode === null) return;
     if (this.grid.length === 0) return;
     for (const tile of this.grid) {
-      tile.gCost = this.getGcost(tile, this.startnode);
-      tile.hCost = this.getHcost(tile, this.endnode);
-      tile.fCost = this.getFcost(tile);
+      tile.gCost = this.getGCost(tile, this.startnode);
+      tile.hCost = this.getHCost(tile, this.endnode);
+      tile.fCost = this.getFCost(tile);
     }
   }
 
@@ -464,13 +464,13 @@ export class ExcaliburAstar {
     return this.grid[y * this.tilemap.cols + x];
   }
 
-  getGcost(node: aStarNode, startnode: aStarNode): number {
+  getGCost(node: aStarNode, startnode: aStarNode): number {
     return Math.abs(node.x - startnode.x) + Math.abs(node.y - startnode.y);
   }
-  getHcost(node: aStarNode, endnode: aStarNode): number {
+  getHCost(node: aStarNode, endnode: aStarNode): number {
     return Math.abs(node.x - endnode.x) + Math.abs(node.y - endnode.y);
   }
-  getFcost(node: aStarNode): number {
+  getFCost(node: aStarNode): number {
     return node.gCost + node.hCost;
   }
 
