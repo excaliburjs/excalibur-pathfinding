@@ -92,6 +92,8 @@ Declare and instantiate the new graph
 ```ts
 import { ExcaliburGraph, GraphTileMap } from "@excaliburjs/excalibur-graph";
 let myGraph = new ExcaliburGraph();
+//...or...
+let myAstar = new ExcaliburAstar();
 ```
 
 <!-- USAGE EXAMPLES -->
