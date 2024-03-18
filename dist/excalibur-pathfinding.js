@@ -381,4 +381,4 @@ export class ExcaliburAstar {
         this.duration = 0;
     }
 }
-//# sourceMappingURL=excalibur-graph.js.map
+//# sourceMappingURL=excalibur-pathfinding.js.map

@@ -92,4 +92,4 @@ export declare class ExcaliburAstar {
     getFcost(node: aStarNode): number;
     resetGrid(): void;
 }
-//# sourceMappingURL=excalibur-graph.d.ts.map
+//# sourceMappingURL=excalibur-pathfinding.d.ts.map

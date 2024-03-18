@@ -1,16 +1,16 @@
 {
-  "name": "@excaliburjs/excalibur-graph",
+  "name": "@excaliburjs/excalibur-pathfinding",
   "version": "1.0.0",
-  "description": "excalibur-graph provides ability to use A* and Dijkstra's Algorithm for pathfinding and with Excalibur.js",
-  "main": "dist/excalibur-graph.min.js",
-  "types": "dist/excalibur-graph.d.ts",
+  "description": "excalibur-pathfinding provides ability to use A* and Dijkstra's Algorithm for pathfinding and with Excalibur.js",
+  "main": "dist/excalibur-pathfinding.min.js",
+  "types": "dist/excalibur-pathfinding.d.ts",
   "scripts": {
     "build": "tsc  && npm run minify ",
-    "minify": "uglifyjs dist/excalibur-graph.js -c -m -o dist/excalibur-graph.min.js"
+    "minify": "uglifyjs dist/excalibur-pathfinding.js -c -m -o dist/excalibur-pathfinding.min.js"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/excaliburjs/excalibur-graph.git"
+    "url": "https://github.com/excaliburjs/excalibur-pathfinding.git"
   },
   "keywords": [
     "excalibur",
@@ -29,9 +29,9 @@
   },
   "license": "BSD-2-Clause",
   "bugs": {
-    "url": "https://github.com/excaliburjs/excalibur-graph/issues"
+    "url": "https://github.com/excaliburjs/excalibur-pathfinding/issues"
   },
-  "homepage": "https://github.com/excaliburjs/excalibur-graph#readme",
+  "homepage": "https://github.com/excaliburjs/excalibur-pathfinding#readme",
   "dependencies": {
     "excalibur": "^0.29.1",
     "uglify-js": "^3.17.4",
