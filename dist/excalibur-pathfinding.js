@@ -40,30 +40,30 @@ export class ExcaliburGraph {
                 return;
             let neighbors = [];
             if (tilemap.tiles[index - 1] && index % tilemap.cols != 0)
-                neighbors.push(index - 1);
+                neighbors.push({ index: index - 1, diagonal: false });
             if (tilemap.tiles[index + 1] && index % tilemap.cols != tilemap.cols - 1)
-                neighbors.push(index + 1);
+                neighbors.push({ index: index + 1, diagonal: false });
             if (tilemap.tiles[index - tilemap.cols])
-                neighbors.push(index - tilemap.cols);
+                neighbors.push({ index: index - tilemap.cols, diagonal: false });
             if (tilemap.tiles[index + tilemap.cols])
-                neighbors.push(index + tilemap.cols);
+                neighbors.push({ index: index + tilemap.cols, diagonal: false });
             if (diagonal) {
                 if (tilemap.tiles[index - tilemap.cols - 1] && index % tilemap.cols != 0)
-                    neighbors.push(index - tilemap.cols - 1);
+                    neighbors.push({ index: index - tilemap.cols - 1, diagonal: true });
                 if (tilemap.tiles[index - tilemap.cols + 1] && index % tilemap.cols != tilemap.cols - 1)
-                    neighbors.push(index - tilemap.cols + 1);
+                    neighbors.push({ index: index - tilemap.cols + 1, diagonal: true });
                 if (tilemap.tiles[index + tilemap.cols - 1] && index % tilemap.cols != 0)
-                    neighbors.push(index + tilemap.cols - 1);
+                    neighbors.push({ index: index + tilemap.cols - 1, diagonal: true });
                 if (tilemap.tiles[index + tilemap.cols + 1] && index % tilemap.cols != tilemap.cols - 1)
-                    neighbors.push(index + tilemap.cols + 1);
+                    neighbors.push({ index: index + tilemap.cols + 1, diagonal: true });
             }
             neighbors.forEach(neighbor => {
-                if (tilemap.tiles[neighbor].collider != true) {
+                if (tilemap.tiles[neighbor.index].collider != true) {
                     this.addEdge({
-                        name: `${index}_${neighbor}`,
+                        name: `${index}_${neighbor.index}`,
                         from: this.nodes.get(`${index}`),
-                        to: this.nodes.get(`${neighbor}`),
-                        value: 1,
+                        to: this.nodes.get(`${neighbor.index}`),
+                        value: neighbor.diagonal ? 1.41 : 1,
                     });
                 }
             });
