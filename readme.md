@@ -38,6 +38,18 @@
         </li>
       </ul>
     </li>
+    <li><a href="#usage-of-the-a-star-module">Usage of the A* pathfinding module</a>
+      <ul>
+        <li><a href="#usage-of-the-a-star-module">A* module</a>
+          <ul>
+            <li><a href="#types-for-astar">Types</a></li>
+            <li><a href="#importing-tilemaps">Tilemap Importing</a></li>
+            <li><a href="#output-from-a-star">Output from A star</a></li>
+            <li><a href="#utility-methods-in-a-star">Utility Methods In A star</a></li>
+         </ul>
+        </li>
+      </ul>
+    </li>
     <li><a href="#contact">Contact</a></li>
     <li><a href="#acknowledgments">Acknowledgments</a></li>
   </ol>
@@ -56,6 +68,12 @@ In the API:
 - Breadth First Search between nodes (bfs)
 - Dijkstra's Algorithm which analyzes the distance between starting node and all other connected nodes
 - Shortest path, utilizing Dijkstra's Algo, we can return the shortest path between two nodes
+
+UPDATED
+
+- add a class for A\* path algorithm
+- added support for diagonal traversal
+- added checks for unreachable nodes
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -282,7 +300,8 @@ shortestPath(startnode: Node, endnode: Node): Node[]
 ```
 
 The shortest path method takes the starting node and ending node as params, and returns an array of nodes consistening of, and in
-order, from starting node to ending node, and includes every node in between.
+order, from starting node to ending node, and includes every node in between. REPEAT... this DOES include the starting node in its
+analysis.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -317,6 +336,111 @@ These methods will return information regaarding the neighbors and relationships
 
 Since relationships have directions, the getAdjacentEdges and getAdjacentEdgesTo provide a list of the coming and going edges
 respectively.
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+## Usage of the A star module
+
+The A\* pathfinding algorithm is an optimized algorithm of pathfinding. This module is tailored to Tilemaps specifically, and can
+handle importing of dedicated GraphTilemaps or the Excalibur Tilemap.
+
+### Types for Astar
+
+What is an aStarNode?
+
+```ts
+export type aStarNode = {
+  id: number | string;
+  collider: boolean;
+  gCost: number;
+  hCost: number;
+  fCost: number;
+  x: number;
+  y: number;
+  checked: boolean;
+  parent: aStarNode | null;
+};
+```
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+### Importing Tilemaps
+
+You can use either a GraphTileMap, the same as the Graph Module, or you can pass an Excalibur Tilemap to the Astar module
+
+#### Excalibur Tilemap
+
+```ts
+// Create a tilemap
+const tilemap = new TileMap({
+  rows: 10,
+  columns: 10,
+  tileWidth: 16,
+  tileHeight: 16,
+});
+
+// loop through tilemap cells
+let tileIndex = 0;
+for (let tile of tilemap.tiles) {
+  //...
+  //logic for setting up tiles
+}
+
+// create astar instance
+let myGraph = new ExcaliburAstar(tilemap);
+```
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+#### GraphTileMap
+
+See above section on setting up a <a href="#importing-tilemap">GraphTilemap</a>
+
+```ts
+let tilemap: GraphTileMap = {
+  name: "tilemap",
+  tiles: [],
+  rows: 3,
+  cols: 4,
+};
+let myGraph = new ExcaliburAstar(tilemap);
+```
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+### Output from A star
+
+```ts
+astar(sourcenode: aStarNode, endnode: aStarNode, diagonal = false): aStarNode[]
+```
+
+After you input your tilemap into the A\* class, you can call the astar() method as many times you need. It will return an array of
+nodes representing the shortest path, starting with the first node to move to... i.e. does NOT include the starting node.
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+### Utility Methods In A star
+
+```ts
+getNodeByIndex(index: number): aStarNode
+```
+
+Based on input number (index) passed to function returns the associated Node object
+
+```ts
+getNodeByCoord(x: number, y: number): aStarNode
+```
+
+Based on the x/y coordinates passed to function returns the associated Node object
+
+```ts
+resetGrid();
+```
+
+Set's the grid costing back to 0, clears out starting/stopping nodes, and is ready to 'rerun' astar method with new start and stop
+nodes.
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- CONTACT -->
 

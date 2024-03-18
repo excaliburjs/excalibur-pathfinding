@@ -2,7 +2,7 @@
   "name": "@excaliburjs/excalibur-graph",
   "version": "1.0.0",
   "description": "excalibur-graph provides ability to use A* and Dijkstra's Algorithm for pathfinding and with Excalibur.js",
-  "main": "dist/excalibur-graph.js",
+  "main": "dist/excalibur-graph.min.js",
   "types": "dist/excalibur-graph.d.ts",
   "scripts": {
     "build": "tsc  && npm run minify ",

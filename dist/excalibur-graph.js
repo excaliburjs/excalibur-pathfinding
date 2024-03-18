@@ -378,6 +378,7 @@ export class ExcaliburAstar {
         this.startnode = null;
         this.endnode = null;
         this.goalReached = false;
+        this.duration = 0;
     }
 }
 //# sourceMappingURL=excalibur-graph.js.map
