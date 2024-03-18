@@ -1,14 +1,12 @@
 {
   "name": "@excaliburjs/excalibur-graph",
   "version": "1.0.0",
-  "description": "excalibur-graph provides ability to build adjacency lists  with Excalibur.js",
-  "main": "dist/excalibur-graph.min.js",
-  "types": "dist/index.d.ts",
+  "description": "excalibur-graph provides ability to use A* and Dijkstra's Algorithm for pathfinding and with Excalibur.js",
+  "main": "dist/excalibur-graph.js",
+  "types": "dist/excalibur-graph.d.ts",
   "scripts": {
-    "vite": "vite build",
-    "build": "tsc --build",
-    "buildprod": "tsc --build && npm run minify",
-    "minify": "uglifyjs dist/index.js -c -m -o dist/excalibur-graph.min.js"
+    "build": "tsc  && npm run minify ",
+    "minify": "uglifyjs dist/excalibur-graph.js -c -m -o dist/excalibur-graph.min.js"
   },
   "repository": {
     "type": "git",
@@ -38,5 +36,8 @@
     "excalibur": "^0.29.1",
     "uglify-js": "^3.17.4",
     "vite": "^5.1.6"
+  },
+  "devDependencies": {
+    "renamer": "^5.0.0"
   }
 }

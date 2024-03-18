@@ -4,6 +4,7 @@
     "useDefineForClassFields": true,
     "lib": ["ESNext", "DOM"],
     "outDir": "./dist/",
+    "sourceRoot": "./src/",
     "sourceMap": true,
     "noImplicitAny": true,
     "module": "ESNext",
