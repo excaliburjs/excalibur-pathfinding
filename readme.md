@@ -6,7 +6,7 @@
     <img src="src/ex-logo.png" alt="Logo" width="80" height="80">
   </a>
 
-  <h3 align="center">Excalibur-Graph Plugin</h3>
+  <h3 align="center">Excalibur-Pathfinding Plugin</h3>
 
   <p align="center">
     A plug in that assists in creating graph networks of nodes and edges, allowing for path finding, dijkstra's, dfs, and bfs algorithms
@@ -301,9 +301,8 @@ the shortest path calculation api is:
 shortestPath(startnode: Node, endnode: Node): Node[]
 ```
 
-The shortest path method takes the starting node and ending node as params, and returns an array of nodes consisting of, and in
-order, from starting node to ending node, and includes every node in between. REPEAT... this DOES include the starting node in its
-analysis.
+The shortest path method takes the starting node and ending node as params, and returns an array of nodes consisting of, and in order,
+from starting node to ending node, and includes every node in between. REPEAT... this DOES include the starting node in its analysis.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
