@@ -93,7 +93,7 @@ Declare and instantiate the new graph
 import { ExcaliburGraph, GraphTileMap } from "@excaliburjs/excalibur-graph";
 let myGraph = new ExcaliburGraph();
 //...or...
-let myAstar = new ExcaliburAstar();
+let myAstar = new ExcaliburAStar();
 ```
 
 <!-- USAGE EXAMPLES -->
@@ -389,7 +389,7 @@ for (let tile of tilemap.tiles) {
 }
 
 // create astar instance
-let myGraph = new ExcaliburAstar(tilemap);
+let myGraph = new ExcaliburAStar(tilemap);
 ```
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -405,7 +405,7 @@ let tilemap: GraphTileMap = {
   rows: 3,
   cols: 4,
 };
-let myGraph = new ExcaliburAstar(tilemap);
+let myGraph = new ExcaliburAStar(tilemap);
 ```
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -416,7 +416,7 @@ let myGraph = new ExcaliburAstar(tilemap);
 astar(sourcenode: aStarNode, endnode: aStarNode, diagonal = false): aStarNode[]
 ```
 
-After you input your tilemap into the A\* class, you can call the astar() method as many times you need. It will return an array of
+After you input your tilemap into the A\* class, you can call the `astar()` method as many times you need. It will return an array of
 nodes representing the shortest path, starting with the first node to move to... i.e. does NOT include the starting node.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
