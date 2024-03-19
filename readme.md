@@ -9,7 +9,7 @@
   <h3 align="center">Excalibur-Graph Plugin</h3>
 
   <p align="center">
-    A plug in that assists in creating graph networks of nodes and edges, allowing for pathfinding, dijkstra's, dfs, and bfs algorithms
+    A plug in that assists in creating graph networks of nodes and edges, allowing for path finding, dijkstra's, dfs, and bfs algorithms
     <br />
     
   </p>
@@ -38,7 +38,7 @@
         </li>
       </ul>
     </li>
-    <li><a href="#usage-of-the-a-star-module">Usage of the A* pathfinding module</a>
+    <li><a href="#usage-of-the-a-star-module">Usage of the A* path finding module</a>
       <ul>
         <li><a href="#usage-of-the-a-star-module">A* module</a>
           <ul>
@@ -128,12 +128,12 @@ type Edge = {
 };
 ```
 
-Edges are the relationship betwee Nodes. The are unidirectional, as such they each have a required 'from' an 'to' property that
+Edges are the relationship between Nodes. The are unidirectional, as such they each have a required 'from' an 'to' property that
 designates the direction of the edge. Also, an optional 'value' number property exists to assign a weight or distance value to the
-Edge. This is very important for shortest path and Disjktra's Algorithm analysis. Tilemaps get imported with a default value of 1 for
+Edge. This is very important for shortest path and Dijkstra's Algorithm analysis. Tilemaps get imported with a default value of 1 for
 each Edge.
 
-Whay is a GraphTile?
+What is a GraphTile?
 
 ```ts
 export type GraphTile = {
@@ -301,7 +301,7 @@ the shortest path calculation api is:
 shortestPath(startnode: Node, endnode: Node): Node[]
 ```
 
-The shortest path method takes the starting node and ending node as params, and returns an array of nodes consistening of, and in
+The shortest path method takes the starting node and ending node as params, and returns an array of nodes consisting of, and in
 order, from starting node to ending node, and includes every node in between. REPEAT... this DOES include the starting node in its
 analysis.
 
@@ -334,7 +334,7 @@ getAdjacentEdges(node: Node): Edge[];
 getAdjacentEdgesTo(node: Node): Edge[];
 ```
 
-These methods will return information regaarding the neighbors and relationships of the Node passed in.
+These methods will return information regarding the neighbors and relationships of the Node passed in.
 
 Since relationships have directions, the getAdjacentEdges and getAdjacentEdgesTo provide a list of the coming and going edges
 respectively.
@@ -343,7 +343,7 @@ respectively.
 
 ## Usage of the A star module
 
-The A\* pathfinding algorithm is an optimized algorithm of pathfinding. This module is tailored to Tilemaps specifically, and can
+The A\* path finding algorithm is an optimized algorithm of path finding. This module is tailored to Tilemaps specifically, and can
 handle importing of dedicated GraphTilemaps or the Excalibur Tilemap.
 
 ### Types for Astar
