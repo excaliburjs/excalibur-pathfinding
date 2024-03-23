@@ -33,14 +33,13 @@
   },
   "homepage": "https://github.com/excaliburjs/excalibur-pathfinding#readme",
   "dependencies": {
-    "uglify-js": "^3.17.4",
-    "vite": "^5.1.6"
+    "uglify-js": "3.17.4",
+    "vite": "5.1.6"
   },
   "devDependencies": {
-    "excalibur": "^0.29.1",
-    "renamer": "^5.0.0"
+    "excalibur": "~0.29.1"
   },
   "peerDependencies": {
-    "excalibur": "^0.29.1"
+    "excalibur": "~0.29.1"
   }
 }
