@@ -2,7 +2,7 @@
 
 <br />
 <div align="center">
-  <a href="http:\\excaliburjs.com">
+  <a href="http://excaliburjs.com">
     <img src="src/ex-logo.png" alt="Logo" width="80" height="80">
   </a>
 
@@ -84,13 +84,13 @@ UPDATED
 To import the plug-in, from your shell:
 
 ```sh
-npm i @excalibur/excalibur-graph
+npm i @excalibur/plugin-pathfinding
 ```
 
 Declare and instantiate the new graph
 
 ```ts
-import { ExcaliburGraph, GraphTileMap } from "@excaliburjs/excalibur-graph";
+import { ExcaliburGraph, GraphTileMap } from "@excaliburjs/plugin-pathfinding";
 let myGraph = new ExcaliburGraph();
 //...or...
 let myAstar = new ExcaliburAStar();
@@ -449,7 +449,7 @@ nodes.
 
 Justin Young - [@jyoung424242 (Twitter)](https://twitter.com/your_username) - [Mookie4242 (itch.io)](https://mookie4242.itch.io/)
 
-Project Link: [GitHub Repo: Excalibur-Graph](https://github.com/excaliburjs/excalibur-graph)
+Project Link: [GitHub Repo: Excalibur-PathFinding](https://github.com/excaliburjs/excalibur-pathfinding)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
