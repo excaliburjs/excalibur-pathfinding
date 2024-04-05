@@ -108,13 +108,13 @@ module parse it itself.
 What is a node?
 
 ```ts
-type Node = {
-  name: string;
+type GraphNode = {
+  name: number|string;
   value?: any;
 };
 ```
 
-Nodes are discrete unis or vertices in the graph, they optionally can be provided some data of any type that can be associated with
+GraphNodes are discrete units or vertices in the graph, they optionally can be provided some data of any type that can be associated with
 that vertex. Nodes will be connected to other Nodes via Edges
 
 What is an Edge?
