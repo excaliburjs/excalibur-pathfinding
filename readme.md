@@ -84,7 +84,7 @@ UPDATED
 To import the plug-in, from your shell:
 
 ```sh
-npm i @excalibur/plugin-pathfinding
+npm i @excaliburjs/plugin-pathfinding
 ```
 
 Declare and instantiate the new graph
