@@ -34,7 +34,7 @@
   "homepage": "https://github.com/excaliburjs/excalibur-pathfinding#readme",
   "dependencies": {
     "uglify-js": "3.17.4",
-    "vite": "5.1.6"
+    "vite": "5.1.7"
   },
   "devDependencies": {
     "excalibur": "~0.29.1"
