@@ -1,6 +1,6 @@
 {
   "name": "@excaliburjs/plugin-pathfinding",
-  "version": "0.29.1",
+  "version": "0.31.0",
   "description": "excalibur-pathfinding provides ability to use A* and Dijkstra's Algorithm for pathfinding and with Excalibur.js",
   "main": "dist/excalibur-pathfinding.min.js",
   "types": "dist/excalibur-pathfinding.d.ts",
@@ -33,11 +33,11 @@
   },
   "homepage": "https://github.com/excaliburjs/excalibur-pathfinding#readme",
   "devDependencies": {
-    "uglify-js": "3.17.4",
-    "vite": "5.1.6",
-    "excalibur": "~0.29.1"
+    "excalibur": "~0.31.0",
+    "uglify-js": "3.19.3",
+    "vite": "^6.3.6"
   },
   "peerDependencies": {
-    "excalibur": "~0.29.1"
+    "excalibur": "~0.31.0"
   }
 }
