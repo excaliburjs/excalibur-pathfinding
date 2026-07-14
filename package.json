@@ -39,5 +39,18 @@
   },
   "peerDependencies": {
     "excalibur": "~0.32.0"
+  },
+  "devEngines": {
+    "runtime": {
+      "name": "node",
+      "onFail": "error",
+      "version": ">=24"
+    },
+    "packageManager": {
+      "name": "npm",
+      "onFail": "error",
+      "version": ">=11"
+    }
   }
+
 }
